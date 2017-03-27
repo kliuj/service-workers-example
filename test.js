@@ -2,14 +2,14 @@ this.addEventListener('install',function(event){
 	event.waitUntil(
 		caches.open('v1').then(function(cache){
 			return cache.addAll([
-					'/test/',
-					'/test/test.js',
-					'/test/images/1.jpg',
-					'/test/images/2.jpg',
-					'/test/images/3.jpg',
-					'/test/images/4.jpg',
-					'/test/images/5.jpg',
-					'/test/images/6.jpg'
+					'/service-workers-example/',
+					'/service-workers-example/test.js',
+					'/service-workers-example/images/1.jpg',
+					'/service-workers-example/images/2.jpg',
+					'/service-workers-example/images/3.jpg',
+					'/service-workers-example/images/4.jpg',
+					'/service-workers-example/images/5.jpg',
+					'/service-workers-example/images/6.jpg'
 				])
 		})
 	)
@@ -25,7 +25,7 @@ this.addEventListener('fetch',function(event){
 		})
 		return response.clone()
 	}).catch(function(){
-		return caches.match('/test/6.jpg')
+		return caches.match('/service-workers-example/images/6.jpg')
 	})
 	)
 })
