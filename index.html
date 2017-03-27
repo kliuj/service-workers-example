@@ -14,16 +14,7 @@
 	<img src="test/images/4.jpg" />
 	<img src="test/images/5.jpg" />
 	<img src="test/images/6.jpg" />
-	<script type="text/javascript">
-		if( 'serviceWorker' in navigator){
-			navigator.serviceWorker.register('test/test.js',{scope:'/test'}).then(function(reg){
-				//registration worked
-				console.log(reg)
-			}).catch(function(error){
-				console.log(error)
-			})
-		}
-	</script>
+	<script type="text/javascript" src="test/app.js"></script>
 	<script type="text/javascript" src="test/test.js"></script>
 </body>
 </html>
