@@ -3,7 +3,9 @@ this.addEventListener('install',function(event){
 		caches.open('v1').then(function(cache){
 			return cache.addAll([
 					'/service-workers-example/',
+					'/service-workers-example/index.html',
 					'/service-workers-example/test.js',
+					'/service-workers-example/app.js',
 					'/service-workers-example/images/1.jpg',
 					'/service-workers-example/images/2.jpg',
 					'/service-workers-example/images/3.jpg',
@@ -21,7 +23,7 @@ this.addEventListener('fetch',function(event){
 	}).then(function(r){
 		response = r;
 		caches.open('v1').then(function(cache){
-			caches.put(event.request,response)
+			cache.put(event.request,response)
 		})
 		return response.clone()
 	}).catch(function(){
