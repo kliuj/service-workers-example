@@ -4,7 +4,6 @@ this.addEventListener('install',function(event){
 			return cache.addAll([
 					'/service-workers-example/',
 					'/service-workers-example/index.html',
-					'/service-workers-example/test.js',
 					'/service-workers-example/app.js',
 					'/service-workers-example/images/1.jpg',
 					'/service-workers-example/images/2.jpg',
