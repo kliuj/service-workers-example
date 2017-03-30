@@ -25,6 +25,8 @@ this.addEventListener('fetch',function(event){
 					cache.put(event.request, response.clone());
 					return response;
 				})
+			}).catch(function(){
+				return caches.match('/service-workers-example/images/6.jpg')
 			})
 		}).catch(function(){
 				return caches.match('/service-workers-example/images/6.jpg')
